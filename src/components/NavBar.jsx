@@ -15,30 +15,45 @@ const NavBar = () => {
             className="md:w-[120px] md:h-[60px] w-[80px] h-[40px]"
           />
         </div>
-        <div className="md:block hidden ml-auto mr-auto order-2">
-          <ul className="flex gap-16 font-bold">
+        <div className="md:block hidden ml-auto mr-auto order-2 justify-center">
+          <ul className="flex md:gap-8 lg:gap-16 font-bold text-center">
             <li>
-              <Link className="md:text-16px text-12px" to="/makeup">
+              <Link
+                className="md:text-16px text-12px hover:text-pink-600"
+                to="/makeup"
+              >
                 Women Make UP
               </Link>
             </li>
             <li>
-              <Link className="md:text-16px text-12px" to="/skincare">
+              <Link
+                className="md:text-16px text-12px hover:text-pink-600"
+                to="/skincare"
+              >
                 Women Skincare
               </Link>
             </li>
             <li>
-              <Link className="md:text-16px text-12px" to="/gifts">
+              <Link
+                className="md:text-16px text-12px hover:text-pink-600"
+                to="/gifts"
+              >
                 Gifts & Sets
               </Link>
             </li>
             <li>
-              <Link className="md:text-16px text-12px" to="/branches">
+              <Link
+                className="md:text-16px text-12px hover:text-pink-600"
+                to="/branches"
+              >
                 Branches
               </Link>
             </li>
             <li>
-              <Link className="md:text-16px text-12px" to="/ourbrand">
+              <Link
+                className="md:text-16px text-12px hover:text-pink-600"
+                to="/ourbrand"
+              >
                 Our Brand
               </Link>
             </li>
