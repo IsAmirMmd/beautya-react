@@ -5,35 +5,55 @@ import language from "../assets/images/language.svg";
 
 const NavBar = () => {
   return (
-    <header>
-      <nav>
+    <header className="w-full bg-background">
+      <nav className="flex max-w-[1440px] mr-auto ml-auto items-end px-6 py-[24px]">
         <div>
           <img src={logoImage} alt="logo" />
         </div>
-        <div>
-          <ul>
+        <div className="ml-auto mr-auto">
+          <ul className="flex gap-16 font-bold">
             <li>
-              <Link to="/makeup">Women Make UP</Link>
+              <Link className="text-16px" to="/makeup">
+                Women Make UP
+              </Link>
             </li>
             <li>
-              <Link to="/skincare">Women Skincare</Link>
+              <Link className="text-16px" to="/skincare">
+                Women Skincare
+              </Link>
             </li>
             <li>
-              <Link to="/gifts">Gifs & Sets</Link>
+              <Link className="text-16px" to="/gifts">
+                Gifts & Sets
+              </Link>
             </li>
             <li>
-              <Link to="/branches">Branches</Link>
+              <Link className="text-16px" to="/branches">
+                Branches
+              </Link>
             </li>
             <li>
-              <Link to="/ourbrand">Our Brand</Link>
+              <Link className="text-16px" to="/ourbrand">
+                Our Brand
+              </Link>
             </li>
           </ul>
         </div>
-        <div id="search">
-          <img src={searchIcon} alt="search icon" />
+        <div id="search" className="w-fit px-[8px] pr-0">
+          <img
+            src={searchIcon}
+            alt="search icon"
+            className="pr-[8px] border-r-[1px] border-neutral-500 cursor-pointer"
+          />
         </div>
-        <div id="language">
+        <div
+          id="language"
+          className="flex items-center ml-[8px] cursor-pointer"
+        >
           <img src={language} alt="language" />
+          <p className="text-16px ml-[4px]">
+            US<span> (EN)</span>
+          </p>
         </div>
       </nav>
     </header>
