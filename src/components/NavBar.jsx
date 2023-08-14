@@ -6,35 +6,39 @@ import hamburgerMenu from "../assets/images/hamburger.svg";
 
 const NavBar = () => {
   return (
-    <header className="w-full bg-background">
+    <header className="w-full bg-background border-b border-neutral-300 ">
       <nav className="flex max-w-[1440px] mr-auto ml-auto items-end px-6 py-[24px]">
-        <div className="order-3 mx-auto">
-          <img src={logoImage} alt="logo" />
+        <div className="order-3 mx-auto md:order-1 md:mx-0">
+          <img
+            src={logoImage}
+            alt="logo"
+            className="md:w-[120px] md:h-[60px] w-[80px] h-[40px]"
+          />
         </div>
-        <div className="md:block hidden ml-auto mr-auto">
+        <div className="md:block hidden ml-auto mr-auto order-2">
           <ul className="flex gap-16 font-bold">
             <li>
-              <Link className="text-16px" to="/makeup">
+              <Link className="md:text-16px text-12px" to="/makeup">
                 Women Make UP
               </Link>
             </li>
             <li>
-              <Link className="text-16px" to="/skincare">
+              <Link className="md:text-16px text-12px" to="/skincare">
                 Women Skincare
               </Link>
             </li>
             <li>
-              <Link className="text-16px" to="/gifts">
+              <Link className="md:text-16px text-12px" to="/gifts">
                 Gifts & Sets
               </Link>
             </li>
             <li>
-              <Link className="text-16px" to="/branches">
+              <Link className="md:text-16px text-12px" to="/branches">
                 Branches
               </Link>
             </li>
             <li>
-              <Link className="text-16px" to="/ourbrand">
+              <Link className="md:text-16px text-12px" to="/ourbrand">
                 Our Brand
               </Link>
             </li>
@@ -44,7 +48,7 @@ const NavBar = () => {
           <img
             src={searchIcon}
             alt="search icon"
-            className="pr-[8px] md:border-r-[1px] md:border-neutral-500 cursor-pointer"
+            className="pr-[8px] md:border-r md:border-neutral-500 cursor-pointer"
           />
         </div>
         <div className="md:hidden block order-1">
@@ -55,7 +59,7 @@ const NavBar = () => {
           className="flex items-center ml-[8px] cursor-pointer order-4"
         >
           <img src={language} alt="language" />
-          <p className="text-16px ml-[4px]">
+          <p className="md:text-16px text-12px ml-[4px]">
             US<span> (EN)</span>
           </p>
         </div>
