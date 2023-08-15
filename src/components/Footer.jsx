@@ -48,60 +48,62 @@ const Footer = () => {
         </div>
       </section>
       <section id="footer-main" className="bg-pink-800 w-full">
-        <div className="max-w-[1440px] text-white px-[108px] flex justify-between">
-          <div className="capitalize md:text-24px font-bold py-[80px]">
-            <h4 className="mb-[16px]">How can we Help?</h4>
+        <div className="max-w-[1440px] text-white md:px-[108px] px-[20px] flex flex-wrap justify-between md:flex-row flex-col py-[24px]  md:py-[80px]">
+          <div className="capitalize md:text-24px text-16px font-bold">
+            <h4 className="md:mb-[16px] mb-[12px]">How can we Help?</h4>
             <ul className="flex flex-col gap-[8px]">
               <li>
-                <Link className="text-16px font-normal" to="">
+                <Link className="md:text-16px text-14px font-normal" to="">
                   Beautya Branches
                 </Link>
               </li>
               <li>
-                <Link className="text-16px font-normal" to="">
+                <Link className="md:text-16px text-14px font-normal" to="">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link className="text-16px font-normal" to="">
+                <Link className="md:text-16px text-14px font-normal" to="">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link className="text-16px font-normal" to="">
+                <Link className="md:text-16px text-14px font-normal" to="">
                   Our Brand
                 </Link>
               </li>
               <li>
-                <Link className="text-16px font-normal" to="">
+                <Link className="md:text-16px text-14px font-normal" to="">
                   Blog
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="capitalize md:text-24px font-bold py-[80px]">
-            <h4 className="mb-[16px]">Products</h4>
+          <div className="capitalize md:text-24px text-16px font-bold md:mt-0 mt-[24px]">
+            <h4 className="md:mb-[16px] mb-[12px]">Products</h4>
             <ul className="flex flex-col gap-[8px]">
               <li>
-                <Link className="text-16px font-normal" to="">
+                <Link className="md:text-16px text-14px font-normal" to="">
                   Women Make up
                 </Link>
               </li>
               <li>
-                <Link className="text-16px font-normal" to="">
+                <Link className="md:text-16px text-14px font-normal" to="">
                   Women Skincare
                 </Link>
               </li>
               <li>
-                <Link className="text-16px font-normal" to="">
+                <Link className="md:text-16px text-14px font-normal" to="">
                   Gifts & Sets
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="capitalize md:text-24px font-bold py-[80px] max-w-[50%]">
-            <h4 className="mb-[16px]">keep in touch with beautya</h4>
-            <p className="font-normal text-16px mb-[16px]">
+          <div className="capitalize lg:text-24px text-16px font-bold lg:max-w-[50%] lg:mt-0 mt-[24px] lg:block hidden">
+            <h4 className="md:mb-[16px] mb-[12px]">
+              keep in touch with beautya
+            </h4>
+            <p className="font-normal md:text-16px text-14px mb-[16px]">
               Join the Beautya newsletter and be first to hear about news,
               offers and skincare advice
             </p>
@@ -109,19 +111,19 @@ const Footer = () => {
               <section className="flex gap-4">
                 <input
                   type="email"
-                  className="bg-transparent border-b font-normal text-20px focus:border-0 focus:border-b outline-none border-neutral-400 w-full px-[16px] py-[8px]"
+                  className="bg-transparent border-b font-normal md:text-20px text-14px focus:border-0 focus:border-b outline-none border-neutral-400 w-full px-[16px] py-[8px]"
                   placeholder="Email Address"
                 />
                 <button
                   type="button"
-                  className="px-[16px] py-[8px] font-normal text-16px border-neutral-400 border"
+                  className="px-[16px] py-[8px] font-normal md:text-16px text-12px border-neutral-400 border"
                 >
                   Subscribe
                 </button>
               </section>
               <section className="flex gap-4 items-start mt-[8px]">
                 <input type="checkbox" className="mt-2" />
-                <label className="text-14px font-normal">
+                <label className="md:text-14px font-normal text-12px">
                   By submitting your email, you agree to receive advertising
                   emails from Beautya. Please review our Privacy Policy, which
                   includes our Financial Incentive Notice for CA residents.
