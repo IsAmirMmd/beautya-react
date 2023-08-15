@@ -3,6 +3,14 @@ import rabbit from "../assets/images/bunny vector.svg";
 import lamp from "../assets/images/lamp.svg";
 import plant from "../assets/images/plant.svg";
 import leaf from "../assets/images/leaf.svg";
+import tiktok from "../assets/images/_TikTok.svg";
+import instagram from "../assets/images/_Instagram.svg";
+import twitter from "../assets/images/_Twitter.svg";
+import facebook from "../assets/images/_Facebook.svg";
+import pintrest from "../assets/images/_Pinterest.svg";
+import reddit from "../assets/images/_Reddit.svg";
+import location from "../assets/images/location.svg";
+import call from "../assets/images/call.svg";
 
 const Footer = () => {
   return (
@@ -134,7 +142,40 @@ const Footer = () => {
         </div>
       </section>
       <section id="footer-contatc" className="bg-pink-900 w-full">
-        <div className="max-w-[1440px]"></div>
+        <div className="max-w-[1440px] flex justify-between px-[108px] py-[16px]">
+          <div id="place-details" className="flex">
+            <p className="flex items-center text-white gap-[8px] md:pr-[16px] border-r border-pink-300 md:mr-[16px]">
+              <img src={location} alt="location" />
+              <span className="text-16px font-normal">
+                Dr. Richardson, California
+              </span>
+            </p>
+            <p className="flex items-center text-white gap-[8px]">
+              <img src={call} alt="call" />
+              <span className="text-16px font-normal">1-802-526-2463</span>
+            </p>
+          </div>
+          <div id="socail-icon" className="flex gap-[8px]">
+            <Link to="/instagram">
+              <img src={instagram} alt="instagram" />
+            </Link>
+            <Link to="/facebook">
+              <img src={facebook} alt="facebook" />
+            </Link>
+            <Link to="/twitter">
+              <img src={twitter} alt="twitter" />
+            </Link>
+            <Link to="/pintrest">
+              <img src={pintrest} alt="pintrest" />
+            </Link>
+            <Link to="/reddit">
+              <img src={reddit} alt="reddit" />
+            </Link>
+            <Link to="/tiktok">
+              <img src={tiktok} alt="tiktok" />
+            </Link>
+          </div>
+        </div>
       </section>
       <section id="footer-copyright" className="bg-pink-950 w-full">
         <div className="max-w-[1440px]"></div>
