@@ -13,3 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
   font-size: 62.5%;
 }
+input{
+  accent-color: #A10550;
+}

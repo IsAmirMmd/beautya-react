@@ -50,6 +50,7 @@ module.exports = {
       "14px": "1.4rem",
       "16px": "1.6rem",
       "18px": "1.8rem",
+      "20px": "2rem",
       "24px": "2.4rem",
       "44px": "4.4rem",
     },
