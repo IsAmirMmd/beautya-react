@@ -11,6 +11,7 @@ import pintrest from "../assets/images/_Pinterest.svg";
 import reddit from "../assets/images/_Reddit.svg";
 import location from "../assets/images/location.svg";
 import call from "../assets/images/call.svg";
+import copyRight from "../assets/images/copyright.svg";
 
 const Footer = () => {
   return (
@@ -183,7 +184,22 @@ const Footer = () => {
         </div>
       </section>
       <section id="footer-copyright" className="bg-pink-950 w-full">
-        <div className="max-w-[1440px]"></div>
+        <div className="max-w-[1440px] md:px-[108px] px-[20px] py-[16px] flex flex-wrap items-center justify-between">
+          <div className="flex text-neutral-400 items-center">
+            <img src={copyRight} alt="copy right" />
+            <p className="ml-[8px] text-12px">
+              2023 Beautya. All Rights Reserved.
+            </p>
+          </div>
+          <div className="flex text-neutral-400">
+            <Link className="text-12px mr-[24px]" to="/terms">
+              Terms & Conditions
+            </Link>
+            <Link className="text-12px" to="/privacy">
+              Privacy Policy
+            </Link>
+          </div>
+        </div>
       </section>
     </footer>
   );
