@@ -13,6 +13,9 @@
   -moz-osx-font-smoothing: grayscale;
   font-size: 62.5%;
 }
-input{
-  accent-color: #A10550;
+h4.title-li {
+  @apply text-16px font-bold mb-[8px];
+}
+input {
+  accent-color: #a10550;
 }

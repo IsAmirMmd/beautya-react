@@ -3,16 +3,18 @@ import logoImage from "../assets/images/logo.svg";
 import searchIcon from "../assets/images/search.svg";
 import language from "../assets/images/language.svg";
 import hamburgerMenu from "../assets/images/hamburger.svg";
+import randomIMG from "../assets/images/random.png";
 import { useState } from "react";
 
 const NavBar = () => {
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
+  const [showMegaMenu, setShowMegaMenu] = useState(false);
 
   return (
     <>
       <header className="w-full bg-background border-b border-neutral-300 fixed">
-        <nav className="flex max-w-[1440px] mr-auto ml-auto items-end px-6 py-[24px]">
-          <div className="order-3 mx-auto md:order-1 md:mx-0">
+        <nav className="flex max-w-[1440px] mr-auto ml-auto items-end px-6 pt-[24px] md:pb-0 pb-[24px]">
+          <div className="order-3 mx-auto md:order-1 md:mx-0 md:pb-[16px]">
             <img
               src={logoImage}
               alt="logo"
@@ -33,7 +35,12 @@ const NavBar = () => {
                 hamburgerClicked && "flex-col text-start"
               } md:gap-8 lg:gap-16 font-bold text-center`}
             >
-              <li className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 md:py-0 py-[16px]">
+              <li
+                onMouseEnter={() => setShowMegaMenu(true)}
+                onMouseLeave={() => setShowMegaMenu(false)}
+                className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 py-[16px]"
+              >
+                {showMegaMenu && <MegaMenu type="makeup" />}
                 <Link
                   className="md:text-16px text-12px block w-full"
                   to="/makeup"
@@ -50,7 +57,7 @@ const NavBar = () => {
                   <path d="M9.5 17L14.5 12L9.5 7V17Z" fill="" />
                 </svg>
               </li>
-              <li className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 md:py-0 py-[16px]">
+              <li className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 py-[16px]">
                 <Link
                   className="md:text-16px text-12px block w-full"
                   to="/skincare"
@@ -68,7 +75,7 @@ const NavBar = () => {
                   <path d="M9.5 17L14.5 12L9.5 7V17Z" fill="" />
                 </svg>
               </li>
-              <li className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 md:py-0 py-[16px]">
+              <li className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 py-[16px]">
                 <Link
                   className="md:text-16px text-12px block w-full"
                   to="/gifts"
@@ -85,7 +92,7 @@ const NavBar = () => {
                   <path d="M9.5 17L14.5 12L9.5 7V17Z" fill="" />
                 </svg>
               </li>
-              <li className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 md:py-0 py-[16px]">
+              <li className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 py-[16px]">
                 <Link
                   className="md:text-16px text-12px block w-full"
                   to="/branches"
@@ -93,7 +100,7 @@ const NavBar = () => {
                   Branches
                 </Link>
               </li>
-              <li className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 md:py-0 py-[16px]">
+              <li className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 py-[16px]">
                 <Link
                   className="md:text-16px text-12px block w-full"
                   to="/ourbrand"
@@ -103,7 +110,7 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <div id="search" className="w-fit px-[8px] pr-0 order-2">
+          <div id="search" className="w-fit px-[8px] pr-0 order-2 md:pb-[16px]">
             <img
               src={searchIcon}
               alt="search icon"
@@ -133,7 +140,7 @@ const NavBar = () => {
           </div>
           <div
             id="language"
-            className="flex items-center ml-[8px] cursor-pointer order-4"
+            className="flex md:pb-[16px] items-center ml-[8px] cursor-pointer order-4"
           >
             <img src={language} alt="language" />
             <p className="md:text-16px text-12px ml-[4px]">
@@ -141,19 +148,71 @@ const NavBar = () => {
             </p>
           </div>
         </nav>
-        {/* {hamburgerClicked ? <OpenedMenu /> : ""} */}
       </header>
-      <div className="md:h-[108px] h-[89px]"></div>
+      <div className="md:h-[100px] h-[89px]"></div>
     </>
   );
 };
 
 export default NavBar;
 
-const OpenedMenu = () => {
+const MegaMenu = ({ type }) => {
   return (
-    <div className="fixed top-[88px] border-t border-neutral-300 px-6 py-5 bg-background w-full min-h-screen">
-      <p>tes</p>
+    <div className="fixed left-0 top-[100px] border-t border-neutral-300 px-6 py-[24px] bg-background w-full text-black">
+      <div className="max-w-[1440px] flex justify-between mx-auto">
+        <ul className="[&>*]:text-16px [&>*]:font-bold flex flex-col gap-[4px] capitalize text-start">
+          <li>new</li>
+          <li>best sellers</li>
+          <li>travel size</li>
+          <li>professional treatments</li>
+          <li>daily defense</li>
+          <li>virtual skincare analysis</li>
+        </ul>
+        <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start">
+          <h4 className="title-li">By Category</h4>
+          <li>cleansers</li>
+          <li>exfoliators</li>
+          <li>toners</li>
+          <li>retinols</li>
+          <li>peels and masques</li>
+          <li>moisturizer</li>
+          <li>night cream</li>
+          <li>facial oil</li>
+          <li>sunscreen</li>
+          <li>eye care</li>
+        </ul>
+        <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start">
+          <h4 className="title-li">By Skin Condition</h4>
+          <li>brightening</li>
+          <li>hydration</li>
+          <li>acne</li>
+          <li>anti-ageing</li>
+          <li>redness</li>
+          <li>sensitive skin</li>
+          <li>sun protection</li>
+        </ul>
+        <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start">
+          <h4 className="title-li">By Collection</h4>
+          <li>Beautya cleansing</li>
+          <li>Beautya Prestige</li>
+          <li>Beautya light -in -white</li>
+          <li>capture totale</li>
+          <li>capture youth</li>
+          <li>capture dreamskin</li>
+          <li>one essential</li>
+          <li>professional solution</li>
+          <li>beautya hydra life</li>
+        </ul>
+        <div className="flex flex-col items-start max-w-[288px] text-start gap-[8px]">
+          <img alt="" src={randomIMG} />
+          <h4 className="text-14px font-semibold">
+            capture totale super potent rich cream
+          </h4>
+          <p className="text-12px font-normal">
+            Global age-defying rich cream - intense nourishment & revitalization
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
