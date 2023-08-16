@@ -57,7 +57,12 @@ const NavBar = () => {
                   <path d="M9.5 17L14.5 12L9.5 7V17Z" fill="" />
                 </svg>
               </li>
-              <li className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 py-[16px]">
+              <li
+                onMouseEnter={() => setShowMegaMenu(true)}
+                onMouseLeave={() => setShowMegaMenu(false)}
+                className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 py-[16px]"
+              >
+                {showMegaMenu && <MegaMenu type="makeup" />}
                 <Link
                   className="md:text-16px text-12px block w-full"
                   to="/skincare"
@@ -75,7 +80,12 @@ const NavBar = () => {
                   <path d="M9.5 17L14.5 12L9.5 7V17Z" fill="" />
                 </svg>
               </li>
-              <li className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 py-[16px]">
+              <li
+                onMouseEnter={() => setShowMegaMenu(true)}
+                onMouseLeave={() => setShowMegaMenu(false)}
+                className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 py-[16px]"
+              >
+                {showMegaMenu && <MegaMenu type="makeup" />}
                 <Link
                   className="md:text-16px text-12px block w-full"
                   to="/gifts"
