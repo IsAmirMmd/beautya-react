@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <footer>
       <section id="footer-badge" className="bg-pink-50 w-full">
-        <div className="max-w-[1440px] md:flex gap-x-[24px] mx-auto gap-y-[16px] grid grid-cols-2 lg:px-[108px] px-[20px] lg:py-[24px] py-[16px] justify-between text-pink-600 flex-wrap capitalize">
+        <div className="max-w-[1440px] md:flex gap-x-[24px] mx-auto gap-y-[16px] grid grid-cols-2 lg:px-[108px] md:px-[64px] px-[20px] lg:py-[24px] py-[16px] justify-between text-pink-600 flex-wrap capitalize">
           <div className="flex items-center gap-[16px]">
             <img
               className="md:w-[40px] w-[28px] aspect-square"
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
       </section>
       <section id="footer-main" className="bg-pink-800 w-full">
-        <div className="max-w-[1440px] text-white md:px-[108px] mx-auto px-[20px] flex flex-wrap justify-between md:flex-row flex-col py-[24px]  md:py-[80px]">
+        <div className="max-w-[1440px] text-white lg:px-[108px] md:px-[64px] mx-auto px-[20px] flex flex-wrap justify-between md:flex-row flex-col py-[24px]  md:py-[80px]">
           <div className="capitalize md:text-24px text-16px font-bold">
             <h4 className="md:mb-[16px] mb-[12px]">How can we Help?</h4>
             <ul className="flex flex-col gap-[8px]">
@@ -108,7 +108,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="capitalize lg:text-24px text-16px font-bold lg:max-w-[50%] lg:mt-0 mt-[24px] lg:block hidden">
+          <div className="capitalize lg:text-24px text-16px font-bold md:max-w-[100%] lg:max-w-[50%] lg:mt-0 md:mt-[36px] mt-[24px]">
             <h4 className="md:mb-[16px] mb-[12px]">
               keep in touch with beautya
             </h4>
@@ -143,7 +143,7 @@ const Footer = () => {
         </div>
       </section>
       <section id="footer-contatc" className="bg-pink-900 w-full">
-        <div className="max-w-[1440px] gap-[20px] flex md:flex-row flex-col justify-between mx-auto md:px-[108px] px-[20px] py-[16px]">
+        <div className="max-w-[1440px] gap-[20px] flex md:flex-row flex-col justify-between mx-auto lg:px-[108px] md:px-[64px] px-[20px] py-[16px] md:items-center">
           <div
             id="place-details"
             className="flex gap-[20px] md:gap-0 md:flex-row flex-col"
@@ -184,7 +184,7 @@ const Footer = () => {
         </div>
       </section>
       <section id="footer-copyright" className="bg-pink-950 w-full">
-        <div className="max-w-[1440px] md:px-[108px] px-[20px] py-[16px] flex flex-wrap items-center justify-between">
+        <div className="max-w-[1440px] lg:px-[108px] md:px-[64px] mx-auto px-[20px] py-[16px] flex flex-wrap items-center justify-between">
           <div className="flex text-neutral-400 items-center">
             <img src={copyRight} alt="copy right" />
             <p className="ml-[8px] text-12px">
