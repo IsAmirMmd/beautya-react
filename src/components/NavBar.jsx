@@ -169,7 +169,7 @@ export default NavBar;
 const MegaMenu = ({ type }) => {
   return (
     <div className="fixed left-0 top-[100px] border-t border-neutral-300 px-6 py-[24px] bg-background w-full text-black">
-      <div className="max-w-[1440px] flex justify-between mx-auto">
+      <div className="max-w-[1440px] flex justify-between mx-auto md:flex-row flex-col">
         <ul className="[&>*]:text-16px [&>*]:font-bold flex flex-col gap-[4px] capitalize text-start">
           <li>new</li>
           <li>best sellers</li>
