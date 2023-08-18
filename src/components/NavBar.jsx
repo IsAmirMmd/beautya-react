@@ -168,8 +168,8 @@ export default NavBar;
 
 const MegaMenu = ({ type }) => {
   return (
-    <div className="fixed left-0 top-[100px] border-t border-neutral-300 px-6 py-[24px] bg-background w-full text-black">
-      <div className="max-w-[1440px] flex justify-between mx-auto md:flex-row flex-col">
+    <div className="fixed left-0 md:top-[100px] top-[89px] border-t border-neutral-300 px-6 py-[24px] bg-background w-full text-black">
+      <div className="max-w-[1440px] flex justify-between mx-auto md:flex-row flex-col overflow-y-auto max-h-[80vh]">
         <ul className="[&>*]:text-16px [&>*]:font-bold flex flex-col gap-[4px] capitalize text-start">
           <li>new</li>
           <li>best sellers</li>
@@ -213,7 +213,7 @@ const MegaMenu = ({ type }) => {
           <li>professional solution</li>
           <li>beautya hydra life</li>
         </ul>
-        <div className="flex flex-col items-start max-w-[288px] text-start gap-[8px]">
+        <div className="md:flex flex-col items-start max-w-[288px] text-start gap-[8px] hidden">
           <img alt="" src={randomIMG} />
           <h4 className="text-14px font-semibold">
             capture totale super potent rich cream
