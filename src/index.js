@@ -5,12 +5,14 @@ import App from "./App";
 import NavBar from "./components/NavBar";
 import { BrowserRouter } from "react-router-dom";
 import Footer from "./components/Footer";
+import Slider from "./components/slider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <NavBar />
+      <Slider />
       <App />
       <Footer />
     </BrowserRouter>
