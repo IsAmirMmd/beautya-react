@@ -169,8 +169,8 @@ export default NavBar;
 const MegaMenu = ({ type }) => {
   return (
     <div className="fixed left-0 md:top-[100px] top-[89px] border-t border-neutral-300 px-6 py-[24px] bg-background w-full text-black">
-      <div className="max-w-[1440px] flex justify-between mx-auto md:flex-row flex-col overflow-y-auto max-h-[80vh]">
-        <ul className="[&>*]:text-16px [&>*]:font-bold flex flex-col gap-[4px] capitalize text-start">
+      <div className="max-w-[1440px] flex justify-between mx-auto md:flex-row flex-col overflow-y-auto max-h-[70vh]">
+        <ul className="[&>*]:text-16px [&>*]:font-bold md:flex hidden flex-col gap-[4px] capitalize text-start">
           <li>new</li>
           <li>best sellers</li>
           <li>travel size</li>
@@ -178,7 +178,7 @@ const MegaMenu = ({ type }) => {
           <li>daily defense</li>
           <li>virtual skincare analysis</li>
         </ul>
-        <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start">
+        <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start md:border-b-0 border-b border-neutral-400">
           <h4 className="title-li">By Category</h4>
           <li>cleansers</li>
           <li>exfoliators</li>
@@ -191,7 +191,7 @@ const MegaMenu = ({ type }) => {
           <li>sunscreen</li>
           <li>eye care</li>
         </ul>
-        <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start">
+        <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start md:border-b-0 border-b border-neutral-400">
           <h4 className="title-li">By Skin Condition</h4>
           <li>brightening</li>
           <li>hydration</li>
@@ -201,7 +201,7 @@ const MegaMenu = ({ type }) => {
           <li>sensitive skin</li>
           <li>sun protection</li>
         </ul>
-        <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start">
+        <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start md:border-b-0 border-b border-neutral-400">
           <h4 className="title-li">By Collection</h4>
           <li>Beautya cleansing</li>
           <li>Beautya Prestige</li>
@@ -213,7 +213,7 @@ const MegaMenu = ({ type }) => {
           <li>professional solution</li>
           <li>beautya hydra life</li>
         </ul>
-        <div className="md:flex flex-col items-start max-w-[288px] text-start gap-[8px] hidden">
+        <div className="md:flex flex-col items-start max-w-[288px] text-start gap-[8px] hidden ">
           <img alt="" src={randomIMG} />
           <h4 className="text-14px font-semibold">
             capture totale super potent rich cream
