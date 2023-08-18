@@ -12,12 +12,19 @@ import sliderImage from "../assets/images/sliderImage.png";
 
 // Import Swiper styles
 import "swiper/css";
+
+const imageForSlider = [
+  { src: sliderImage, id: 1 },
+  { src: sliderImage, id: 2 },
+  { src: sliderImage, id: 3 },
+  { src: sliderImage, id: 4 },
+];
+
 const Slider = () => {
   return (
     <div className="max-w-[1440px] mx-auto">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        className="[&>*]:brightness-50"
         spaceBetween={0}
         slidesPerView={1}
         loop={true}
@@ -26,18 +33,13 @@ const Slider = () => {
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide>
-          <img src={sliderImage} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={sliderImage} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={sliderImage} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={sliderImage} alt="" />
-        </SwiperSlide>
+        {imageForSlider.map((image) => {
+          return (
+            <SwiperSlide key={image.id}>
+              <img src={image.src} alt={image.id} className="brightness-50" />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );
