@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return (
     <>
-      <header className="w-full bg-background border-b border-neutral-300 fixed">
+      <header className="w-full bg-background border-b border-neutral-300 fixed z-30">
         <nav className="flex max-w-[1440px] mr-auto ml-auto items-end px-6 pt-[24px] md:pb-0 pb-[24px]">
           <div className="order-3 mx-auto md:order-1 md:mx-0 md:pb-[16px]">
             <img
@@ -40,7 +40,9 @@ const NavBar = () => {
                 onMouseLeave={() => setShowMegaMenu(false)}
                 className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 py-[16px]"
               >
-                {showMegaMenu && <MegaMenu type="makeup" />}
+                {showMegaMenu && (
+                  <MegaMenu setOnShow={setShowMegaMenu} type="makeup" />
+                )}
                 <Link
                   className="md:text-16px text-12px block w-full"
                   to="/makeup"
@@ -62,7 +64,9 @@ const NavBar = () => {
                 onMouseLeave={() => setShowMegaMenu(false)}
                 className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 py-[16px]"
               >
-                {showMegaMenu && <MegaMenu type="makeup" />}
+                {showMegaMenu && (
+                  <MegaMenu setOnShow={setShowMegaMenu} type="makeup" />
+                )}
                 <Link
                   className="md:text-16px text-12px block w-full"
                   to="/skincare"
@@ -85,7 +89,9 @@ const NavBar = () => {
                 onMouseLeave={() => setShowMegaMenu(false)}
                 className="hover:text-pink-600 flex justify-between items-center md:border-b-0 border-b border-neutral-400 py-[16px]"
               >
-                {showMegaMenu && <MegaMenu type="makeup" />}
+                {showMegaMenu && (
+                  <MegaMenu setOnShow={setShowMegaMenu} type="makeup" />
+                )}
                 <Link
                   className="md:text-16px text-12px block w-full"
                   to="/gifts"
@@ -166,63 +172,71 @@ const NavBar = () => {
 
 export default NavBar;
 
-const MegaMenu = ({ type }) => {
+const MegaMenu = ({ type, setOnShow }) => {
   return (
-    <div className="fixed left-0 md:top-[100px] top-[89px] border-t border-neutral-300 px-6 py-[24px] bg-background w-full text-black">
-      <div className="max-w-[1440px] flex justify-between mx-auto md:flex-row flex-col overflow-y-auto max-h-[70vh]">
-        <ul className="[&>*]:text-16px [&>*]:font-bold md:flex hidden flex-col gap-[4px] capitalize text-start">
-          <li>new</li>
-          <li>best sellers</li>
-          <li>travel size</li>
-          <li>professional treatments</li>
-          <li>daily defense</li>
-          <li>virtual skincare analysis</li>
-        </ul>
-        <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start md:border-b-0 border-b border-neutral-400">
-          <h4 className="title-li">By Category</h4>
-          <li>cleansers</li>
-          <li>exfoliators</li>
-          <li>toners</li>
-          <li>retinols</li>
-          <li>peels and masques</li>
-          <li>moisturizer</li>
-          <li>night cream</li>
-          <li>facial oil</li>
-          <li>sunscreen</li>
-          <li>eye care</li>
-        </ul>
-        <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start md:border-b-0 border-b border-neutral-400">
-          <h4 className="title-li">By Skin Condition</h4>
-          <li>brightening</li>
-          <li>hydration</li>
-          <li>acne</li>
-          <li>anti-ageing</li>
-          <li>redness</li>
-          <li>sensitive skin</li>
-          <li>sun protection</li>
-        </ul>
-        <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start md:border-b-0 border-b border-neutral-400">
-          <h4 className="title-li">By Collection</h4>
-          <li>Beautya cleansing</li>
-          <li>Beautya Prestige</li>
-          <li>Beautya light -in -white</li>
-          <li>capture totale</li>
-          <li>capture youth</li>
-          <li>capture dreamskin</li>
-          <li>one essential</li>
-          <li>professional solution</li>
-          <li>beautya hydra life</li>
-        </ul>
-        <div className="md:flex flex-col items-start max-w-[288px] text-start gap-[8px] hidden ">
-          <img alt="" src={randomIMG} />
-          <h4 className="text-14px font-semibold">
-            capture totale super potent rich cream
-          </h4>
-          <p className="text-12px font-normal">
-            Global age-defying rich cream - intense nourishment & revitalization
-          </p>
+    <>
+      <div
+        className="fixed md:top-[100px] top-[89px] left-0 flex w-full min-h-screen z-10 backdrop-blur-[2px] backdrop-brightness-75"
+        onMouseEnter={() => setOnShow(false)}
+      ></div>
+
+      <div className="fixed left-0 md:top-[100px] top-[89px] border-t border-neutral-300 px-6 py-[24px] bg-background w-full text-black z-20">
+        <div className="max-w-[1440px] flex justify-between mx-auto md:flex-row flex-col overflow-y-auto max-h-[70vh]">
+          <ul className="[&>*]:text-16px [&>*]:font-bold md:flex hidden flex-col gap-[4px] capitalize text-start">
+            <li>new</li>
+            <li>best sellers</li>
+            <li>travel size</li>
+            <li>professional treatments</li>
+            <li>daily defense</li>
+            <li>virtual skincare analysis</li>
+          </ul>
+          <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start md:border-b-0 border-b border-neutral-400">
+            <h4 className="title-li">By Category</h4>
+            <li>cleansers</li>
+            <li>exfoliators</li>
+            <li>toners</li>
+            <li>retinols</li>
+            <li>peels and masques</li>
+            <li>moisturizer</li>
+            <li>night cream</li>
+            <li>facial oil</li>
+            <li>sunscreen</li>
+            <li>eye care</li>
+          </ul>
+          <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start md:border-b-0 border-b border-neutral-400">
+            <h4 className="title-li">By Skin Condition</h4>
+            <li>brightening</li>
+            <li>hydration</li>
+            <li>acne</li>
+            <li>anti-ageing</li>
+            <li>redness</li>
+            <li>sensitive skin</li>
+            <li>sun protection</li>
+          </ul>
+          <ul className="[&>*]:text-14px [&>*]:font-normal flex flex-col gap-[4px] capitalize text-start md:border-b-0 border-b border-neutral-400">
+            <h4 className="title-li">By Collection</h4>
+            <li>Beautya cleansing</li>
+            <li>Beautya Prestige</li>
+            <li>Beautya light -in -white</li>
+            <li>capture totale</li>
+            <li>capture youth</li>
+            <li>capture dreamskin</li>
+            <li>one essential</li>
+            <li>professional solution</li>
+            <li>beautya hydra life</li>
+          </ul>
+          <div className="md:flex flex-col items-start max-w-[288px] text-start gap-[8px] hidden ">
+            <img alt="" src={randomIMG} />
+            <h4 className="text-14px font-semibold">
+              capture totale super potent rich cream
+            </h4>
+            <p className="text-12px font-normal">
+              Global age-defying rich cream - intense nourishment &
+              revitalization
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
