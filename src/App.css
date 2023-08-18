@@ -1,9 +1,11 @@
 .App {
   text-align: center;
 }
-
-html .swiper-pagination-bullet {
+html .swiper-pagination-bullet-active {
   background: #a10550;
+  border: 1px solid #f50779;
+}
+html .swiper-pagination-bullet {
   border-radius: 0;
   width: 24px;
   height: 4px;
