@@ -6,6 +6,7 @@ html .swiper-pagination-bullet-active {
   border: 1px solid #f50779;
 }
 html .swiper-pagination-bullet {
+  display: none;
   border-radius: 0;
   width: 24px;
   height: 4px;
@@ -22,11 +23,16 @@ html .swiper-button-next {
   top: 0;
   height: 100%;
   bottom: 0;
-  padding: 3rem;
+  padding: 2.5rem;
 }
 html .swiper-button-prev {
   left: 0;
 }
 html .swiper-button-next {
   right: 0;
+}
+@media (width>=768px) {
+  html .swiper-pagination-bullet {
+    display: inline-block;
+  }
 }
