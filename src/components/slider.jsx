@@ -37,6 +37,14 @@ const Slider = () => {
           return (
             <SwiperSlide key={image.id}>
               <img src={image.src} alt={image.id} className="brightness-50" />
+              <div className="absolute bottom-[10%] left-[50%] translate-x-[-50%] text-center">
+                <p className="capitalize text-white md:text-44px font-bold mb-[24px]">
+                  unlock your natural glow
+                </p>
+                <button className="border-2 border-white text-16px font-normal text-white px-8 py-3">
+                  Know More
+                </button>
+              </div>
             </SwiperSlide>
           );
         })}
